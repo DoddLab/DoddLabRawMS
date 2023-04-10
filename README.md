@@ -129,3 +129,8 @@ All raw data processing result would be put in the `00_raw_data_processing` fold
 - B011...: peak areas in each sample
 
 ![](https://raw.githubusercontent.com/JustinZZW/blogImg/main/202304101240785.png)
+
+
+## License
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a> 
+This work is licensed under the Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
