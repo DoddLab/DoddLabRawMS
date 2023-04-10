@@ -1,0 +1,26 @@
+Package: DoddLabRawMS
+Type: Package
+Title: Dodd Lab Raw MS data processing pipeline
+Version: 0.1.1
+Author: c(
+    person(given = "Zhiwei",
+           family = "Zhou",
+           role = c("aut", "cre"),
+           email = "zhouzw@stanford.edu",
+           comment = c(ORCID = "0000-0002-1249-6870"))
+           )
+Description: This package is used for raw LC-MS data processing. It is a part of Dodd Lab untargeted metabolomics pipeline.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    crayon,
+    dplyr,
+    pbapply,
+    readr,
+    readxl,
+    stringr,
+    tidyr,
+    writexl,
+    xcms
+RoxygenNote: 7.2.3
