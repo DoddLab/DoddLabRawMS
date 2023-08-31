@@ -4,7 +4,7 @@
 \alias{initialize_raw_parameter_class}
 \title{initialize_raw_parameter_class}
 \usage{
-initialize_raw_parameter_class(column = c("hilic", "c18"))
+initialize_raw_parameter_class(column = c("hilic", "c18", "transponson"))
 }
 \arguments{
 \item{column}{'hilic', 'c18'}

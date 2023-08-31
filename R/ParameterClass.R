@@ -29,7 +29,7 @@ setClass(Class = "RawMsParameterClass",
 
 setGeneric(name = 'initialize_raw_parameter_class',
            def = function(
-    column = c('hilic', 'c18')
+    column = c('hilic', 'c18', 'transponson')
            ){
              column <- match.arg(column)
              message(crayon::blue('Initialize raw ms parameter class...\n'))
@@ -58,6 +58,24 @@ setGeneric(name = 'initialize_raw_parameter_class',
                                            snthr = 10,
                                            peakwidth = c(10, 78),
                                            mzdiff = -0.02,
+                                           nSlaves = 6)
+
+               para_rt_correction <- list(method = 'obiwarp',
+                                          plottype = 'deviation',
+                                          profStep = 0.1)
+
+               para_peak_grouping <- list(method="density",
+                                          bw = 5,
+                                          mzwid = 0.015,
+                                          minfrac = 0.5)
+             }
+
+             if (column == 'transponson') {
+               para_peak_detection <- list(method = 'centWave',
+                                           ppm = 20,
+                                           snthr = 5,
+                                           peakwidth = c(10, 60),
+                                           mzdiff = 1e-04,
                                            nSlaves = 6)
 
                para_rt_correction <- list(method = 'obiwarp',

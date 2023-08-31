@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # DoddLabRawMS (Dodd Lab Raw Mass Spectrometry Data Processing)
 - Author: Zhiwei Zhou (zhouzw@stanford.edu)
 - Created: 04/10/2023

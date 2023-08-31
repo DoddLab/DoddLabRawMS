@@ -4,7 +4,7 @@
 \alias{process_raw_data}
 \title{process_raw_data}
 \usage{
-process_raw_data(parameter_set = NULL, path = ".")
+process_raw_data(parameter_set = NULL, is_skip_rtcor = FALSE, path = ".")
 }
 \arguments{
 \item{parameter_set}{a parameter set class object (RawMsParameterClass). It can be generated easily by running \code{initialize_raw_parameter_class()}}

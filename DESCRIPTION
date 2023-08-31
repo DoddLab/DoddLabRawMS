@@ -1,7 +1,7 @@
 Package: DoddLabRawMS
 Type: Package
 Title: Dodd Lab Raw MS data processing pipeline
-Version: 0.1.1
+Version: 0.1.11
 Author: c(
     person(given = "Zhiwei",
            family = "Zhou",

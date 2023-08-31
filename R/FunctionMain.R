@@ -17,6 +17,7 @@
 
 setGeneric(name = 'process_raw_data',
            def = function(parameter_set = NULL,
+                          is_skip_rtcor = FALSE,
                           path = '.'){
 
              if (is.null(parameter_set)) {
@@ -51,13 +52,20 @@ setGeneric(name = 'process_raw_data',
 
 
              message(crayon::blue('02: RT correction...'))
-             # retention time correction
-             pdf(file.path(path_output, 'rt_correction_obiwarp.pdf'))
-             xsetc <-  xcms::retcor(xset,
-                                    method = parameter_set@para_rt_correction$method,
-                                    plottype = parameter_set@para_rt_correction$plottype,
-                                    profStep = parameter_set@para_rt_correction$profStep)
-             dev.off()
+
+             if (!is_skip_rtcor) {
+               # retention time correction
+               pdf(file.path(path_output, 'rt_correction_obiwarp.pdf'))
+               xsetc <-  try(xcms::retcor(xset,
+                                          method = parameter_set@para_rt_correction$method,
+                                          plottype = parameter_set@para_rt_correction$plottype,
+                                          profStep = parameter_set@para_rt_correction$profStep))
+               dev.off()
+             } else {
+               message(crayon::red('Note: error in RT correction. Skip the RT correction step.'))
+               xsetc <- xset
+             }
+
              save(xsetc, file = file.path(path_output, '00_intermediate_data', 'xset1_c.RData'))
 
              # peak grouping
