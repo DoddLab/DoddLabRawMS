@@ -8,3 +8,6 @@
 # DoddLabRawMS 0.1.11
 * Added a transponson parameter set
 * Mofidy the function to skip rt correction error
+
+# DoddLabRawMS 0.1.12
+* correct the error: peakwidth were assigned as snthr value

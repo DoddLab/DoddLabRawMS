@@ -43,7 +43,7 @@ setGeneric(name = 'process_raw_data',
                                    method = parameter_set@para_peak_detection$method,
                                    ppm = parameter_set@para_peak_detection$ppm,
                                    snthr = parameter_set@para_peak_detection$snthr,
-                                   peakwidth = parameter_set@para_peak_detection$snthr,
+                                   peakwidth = parameter_set@para_peak_detection$peakwidth,
                                    mzdiff = parameter_set@para_peak_detection$mzdiff,
                                    nSlaves = parameter_set@para_peak_detection$nSlaves)
 
